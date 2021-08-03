@@ -21,7 +21,13 @@
 
 6. puxar as entidades das noticias das noticias salvas, utilizar o metodo GET no caminho /get_entity
 
+## to do list
 
+- puxar mais informacoes sobre cada noticias (autor, data da publicação)
+- criar categorias para cada tipo de noticias
+- aperfeiçoar o filtragem de noticias da bolsa de valores (verificar os noticias em base no codigo do ativo, nome da empresa)
+- inserir noticias em um banco de dados
+- treinar do zero um modelo no spacy focado em noticias de finanças
 
 ## Instruções:
 
