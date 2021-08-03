@@ -3,6 +3,26 @@
 # Teste para candidatos à vaga de Desenvolvedor Python (com foco em IA - inteligencia Artificial)  
 
 
+## Instruções para rodar o codigo
+
+1. criar uma env e baixar todas as bibliotecas existente no arquivo bibliotecas.txt
+
+2. instalar o pacote de portugues do Spacy
+	- python -m spacy download pt_core_news_sm
+	
+3. rodar o arquivo train_model.py para treinar o modelo
+
+4. iniciar a api flask
+	- CMD - set FLASK_APP=main.py
+	- Bash: export FLASK_APP=main.py
+	- flask run
+
+5. para puxar e salvar as noticias, utilizar o metodo put no caminho /get_news
+
+6. puxar as entidades das noticias das noticias salvas, utilizar o metodo GET no caminho /get_entity
+
+
+
 ## Instruções:
 
 1. Minerar 5 notícias sobre ações da B3. Importante salvar para ser usadas no processamento de linguagem natural(PNL) posteriormente. 

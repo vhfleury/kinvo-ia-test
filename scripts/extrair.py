@@ -16,14 +16,14 @@ class noticias():
 
         for posicao in range(self.news.shape[0]):
             content_news = self.news.iloc[posicao]
-            news = self.puxa_noticia(content_news)
+            news = self.get_noticia(content_news)
             
-            self.link = self.puxa_link(content_news)
-            self.titulo = self.puxa_titulo(content_news)
-            self.entidades = self.puxa_entidades(news)
+            self.link = self.get_link(content_news)
+            self.titulo = self.get_titulo(content_news)
+            self.entidades = self.get_entidades(news)
 
             dados.append(self.imprime_entidades())
-        return {"noticias": dados}
+        return dados
 
     def imprime_entidades(self):
 
@@ -31,16 +31,16 @@ class noticias():
                 "link": self.link,
                 "entidades": self.entidades}
 
-    def puxa_noticia(self, content_news):
+    def get_noticia(self, content_news):
         return content_news['noticia']
 
-    def puxa_link(self, content_news):
+    def get_link(self, content_news):
         return content_news['link']
 
-    def puxa_titulo(self, content_news ):
+    def get_titulo(self, content_news ):
         return content_news['titulo']
 
-    def puxa_entidades(self, news):
+    def get_entidades(self, news):
 
         texto = self.nlp(news)
         enti = list()
